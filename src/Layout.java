@@ -1,8 +1,8 @@
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-import java.awt.BorderLayout;
-import java.awt.FlowLayout;
+//import java.awt.BorderLayout;
+//import java.awt.FlowLayout;
 import java.awt.GridLayout;
 public class Layout extends JFrame {
 	public Layout(){

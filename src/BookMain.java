@@ -40,7 +40,7 @@ public class BookMain extends JFrame {
 		pan.setLayout(cardlayout);
 		pan.add(lbl, "Book Management Information System");
 		this.add(pan, BorderLayout.CENTER);
-		this.setSize(300, 450);
+		this.setSize(500, 250);
 		this.setVisible(true);
 		this.setJMenuBar(menubar);
 		

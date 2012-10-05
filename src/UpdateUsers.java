@@ -6,32 +6,32 @@ import java.sql.*;
 import javax.swing.*;
 
 	public class UpdateUsers extends JPanel{
-		private JTextField number,name,college,subject,grade;
-		private JLabel jnumber,jname,jpassword,jcollege,jsubject,jgrade;
+		private JTextField number, name, college, subject, grade;
+		private JLabel jnumber, jname, jpassword, jcollege, jsubject, jgrade;
 		private JPasswordField password;
-		private JButton button1,button2;
+		private JButton button1, button2;
 		PrintStream output;
 		DataInputStream input;
-		String message="";
+		String message = "";
 		String bookinfor[];
 
 		public UpdateUsers()
 		{
 			this.setLayout(null);
-			jnumber=new JLabel("Student ID");
-			number=new JTextField();
-			jname=new JLabel("Name");
-			name=new JTextField();
-			jpassword=new JLabel("Password");
-			password=new JPasswordField();
-			jcollege=new JLabel("College");
-			college=new JTextField();
-			jsubject=new JLabel("Subject");
-			subject=new JTextField();
-			jgrade=new JLabel("Grade");
-			grade=new JTextField();
-			button1=new JButton("Check");
-			button2=new JButton("Edit");
+			jnumber = new JLabel("Student ID");
+			number = new JTextField();
+			jname = new JLabel("Name");
+			name = new JTextField();
+			jpassword = new JLabel("Password");
+			password = new JPasswordField();
+			jcollege = new JLabel("College");
+			college = new JTextField();
+			jsubject = new JLabel("Subject");
+			subject = new JTextField();
+			jgrade = new JLabel("Grade");
+			grade = new JTextField();
+			button1 = new JButton("Check");
+			button2 = new JButton("Edit");
 			
 			//set Controller's Bounds
 			jnumber.setBounds(30,20,60,26);
@@ -140,7 +140,7 @@ import javax.swing.*;
 						} else
 							JOptionPane.showMessageDialog(null, "Edit Failed!", "Edit",JOptionPane.WARNING_MESSAGE);
 					}catch(ClassNotFoundException ce){
-						System.out.println("SQLException:"+ce.getMessage());
+						System.out.println("SQLException:" + ce.getMessage());
 					}catch(SQLException ex){
 						System.out.println(ex);	
 					}catch(Exception s){
@@ -153,7 +153,7 @@ import javax.swing.*;
 		}
 		public static void main(String[] args)
 		  {
-			UpdateUsers app1=new UpdateUsers();
+			UpdateUsers app1 = new UpdateUsers();
 			  
 			  
 		  }		

@@ -57,7 +57,7 @@ public class BookMain extends JFrame {
 		menuitem1.setText("Add User");
 		menuitem2.setText("Edit User");
 		menuitem3.setText("Delete User");
-		menuitem4.setText("Search a User");
+		menuitem4.setText("Check a User");
 		
 		menu1.add(menuitem1);
 		menu1.add(menuitem2);
@@ -66,7 +66,7 @@ public class BookMain extends JFrame {
 		
 		menuitem5.setText("Borrow Books");
 		menuitem6.setText("Return Books");
-		menuitem7.setText("Search a Book");
+		menuitem7.setText("Check a Book");
 		
 		menu2.add(menuitem5);
 		menu2.add(menuitem6);
@@ -75,7 +75,7 @@ public class BookMain extends JFrame {
 		menuitem8.setText("Add Books");
 		menuitem9.setText("Edit Books");
 		menuitem10.setText("Delete Books");
-		menuitem11.setText("Search a Book");
+		menuitem11.setText("Check a Book");
 		
 		menu3.add(menuitem8);
 		menu3.add(menuitem9);
@@ -139,7 +139,7 @@ public class BookMain extends JFrame {
 		menuitem7.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
 				CheckLend checklend1 = new CheckLend();
-				pan.add(checklend1,"Search Borrowed Information");
+				pan.add(checklend1,"Check Borrowed Information");
 				CardLayout c1 = (CardLayout)pan.getLayout();
 				c1.show(pan, "Check Borrowed Information");	
 			}
@@ -170,10 +170,10 @@ public class BookMain extends JFrame {
 		});
 		menuitem11.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				SearchBook searchbook1 = new SearchBook();
-				pan.add(searchbook1,"Search Book Information");
+				CheckBook checkbook1 = new CheckBook();
+				pan.add(checkbook1,"Check Book Information");
 				CardLayout c1 = (CardLayout)pan.getLayout();
-				c1.show(pan, "Search Book Information");	
+				c1.show(pan, "Check Book Information");	
 			}
 		});
 		menuitem12.addActionListener(new java.awt.event.ActionListener(){

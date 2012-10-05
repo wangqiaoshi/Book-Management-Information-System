@@ -80,7 +80,6 @@ public class AddUsers extends JPanel {
 							+ subject.getText()
 							+ "','"
 							+ grade.getText() + "')";
-					//ResultSet result = conn.executeQuery(sqlstr);
 					int k = -1;
 					k = conn.insert(sqlstr);
 					if (number.getText().toString().equals(""))

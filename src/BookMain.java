@@ -138,8 +138,8 @@ public class BookMain extends JFrame {
 		});
 		menuitem7.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				CheckLend checklend1 = new CheckLend();
-				pan.add(checklend1,"Check Lent Information");
+				CheckLent checklent1 = new CheckLent();
+				pan.add(checklent1,"Check Lent Information");
 				CardLayout c1 = (CardLayout)pan.getLayout();
 				c1.show(pan, "Check Lent Information");	
 			}

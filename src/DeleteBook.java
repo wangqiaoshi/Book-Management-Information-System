@@ -89,7 +89,7 @@ public class DeleteBook extends JPanel{
                     JOptionPane.showMessageDialog(null, "Price cannot be Empty!", "Edit", JOptionPane.WARNING_MESSAGE);
 				}
 			});
-		setSize(250,380);
+		setSize(250, 380);
 		this.setVisible(true);
 		}
 	public static void main(String[] args){

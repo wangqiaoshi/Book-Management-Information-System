@@ -19,12 +19,12 @@ public class LendBook extends JPanel{
 		unumber = new JTextField();
 		button1 = new JButton("Lend");
 		button2 = new JButton("Cancel");
-		jbnumber.setBounds(30,20,60,30);
-		junumber.setBounds(30,70,60,26);
-		bnumber.setBounds(110,20,120,26);
-		unumber.setBounds(110,70,120,26);
-		button1.setBounds(30,120,60,26);
-		button2.setBounds(110,120,60,26);
+		jbnumber.setBounds(30, 20, 60, 30);
+		junumber.setBounds(30, 70, 60, 26);
+		bnumber.setBounds(110, 20, 120, 26);
+		unumber.setBounds(110, 70, 120, 26);
+		button1.setBounds(30, 120, 60, 26);
+		button2.setBounds(110, 120, 60, 26);
 		this.add(jbnumber);
 		this.add(bnumber);
 		this.add(junumber);
@@ -36,9 +36,9 @@ public class LendBook extends JPanel{
 	    button1.addActionListener(new ActionListener(){
 	       	public void actionPerformed(ActionEvent e){
 	       		if(bnumber.getText().toString().equals(""))
-	        		JOptionPane.showMessageDialog(null, "Book ID cannot be Empty!","Lend",JOptionPane.WARNING_MESSAGE);
+	        		JOptionPane.showMessageDialog(null, "Book ID cannot be Empty!", "Lend", JOptionPane.WARNING_MESSAGE);
 	        	else if(unumber.getText().toString().equals(""))
-	            	JOptionPane.showMessageDialog(null, "User ID cannot be Empty!","Lend",JOptionPane.WARNING_MESSAGE);
+	            	JOptionPane.showMessageDialog(null, "User ID cannot be Empty!", "Lend", JOptionPane.WARNING_MESSAGE);
 	       		}
 	       	});
 	    
@@ -49,7 +49,7 @@ public class LendBook extends JPanel{
 	    		unumber.setText("");
 	    		}
 	    	});
-	    setSize(250,300);
+	    setSize(250, 300);
 	    this.setVisible(true);
 	    }
 	

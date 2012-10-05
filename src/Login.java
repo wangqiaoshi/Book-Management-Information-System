@@ -1,7 +1,7 @@
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-public class Login extends JFrame {
+public class Login extends JFrame{
 	private JLabel JLb1;
 	private JLabel JLb2;
 	private JButton Ok_btn;
@@ -13,20 +13,20 @@ public class Login extends JFrame {
 	//Constructor
 	public Login(){
 		
-		frame=new JFrame("Login");
-		Container content=frame.getContentPane();
+		frame = new JFrame("Login");
+		Container content = frame.getContentPane();
 		//Content Pane Layout
-		content.setLayout(new GridLayout(3,2,20,20));
-		JLb1=new JLabel("Username");
-		JLb2=new JLabel("Password");
+		content.setLayout(new GridLayout(3, 2, 20, 20));
+		JLb1 = new JLabel("Username");
+		JLb2 = new JLabel("Password");
 		//Label Layout
 		JLb1.setHorizontalAlignment(SwingConstants.CENTER);
 		JLb2.setHorizontalAlignment(SwingConstants.CENTER);
-		jtflduser=new JTextField();
-		jtpwdfld=new JPasswordField();
+		jtflduser = new JTextField();
+		jtpwdfld = new JPasswordField();
 		//Button Declaration
-		Ok_btn=new JButton("OK");
-		Cancel_btn=new JButton("Cancel");
+		Ok_btn = new JButton("OK");
+		Cancel_btn = new JButton("Cancel");
 		//Add Action Listener for Button
 		Ok_btn.addActionListener(new ActionHandler());
 		Cancel_btn.addActionListener(new ActionHandler());
@@ -47,18 +47,18 @@ public class Login extends JFrame {
 	class ActionHandler implements ActionListener{
 		public void actionPerformed(ActionEvent e){
 			String str1,str2,sqlStr;
-			Object obj=e.getSource();
+			Object obj = e.getSource();
 			//Get Username & Password from *Field
 			str1=jtflduser.getText().trim();
 			str2=new String(jtpwdfld.getPassword()).trim();		
 				if(obj.equals(Ok_btn)){
 					if(str1.equals("")){
-						JOptionPane.showMessageDialog(frame, "The Username Can Not Be Empty!");
+						JOptionPane.showMessageDialog(frame, "Username cannot be Empty!");
 					}
 					if(str1.equals("elilien")&&str2.equals("test")){
 						JOptionPane.showMessageDialog(frame,"Login Successful!");
 						//Open Book Management Information System Main Window
-						BookMain bk=new BookMain();
+						BookMain bk = new BookMain();
 						bk.go();
 						frame.dispose();
 										
@@ -70,8 +70,7 @@ public class Login extends JFrame {
 				}			
 		}		
 	}
-	public static void main(String args[])
-	{
-		Login login=new Login();		
-	}	
+	public static void main(String args[]){
+		Login login = new Login();
+		}	
 }

@@ -35,8 +35,8 @@ public class CheckUser extends JPanel implements ActionListener{
 		checkfield = new JTextField("Please Input the Query");
 		checkcbo = new JComboBox();
 		button1 = new JButton("Check");
-		checkcbo.addItem("Check with Student ID");
-		checkcbo.addItem("Check with Student Name");
+		checkcbo.addItem("Check with User ID");
+		checkcbo.addItem("Check with User Name");
 		
 		//set JPanel Layout
 		jp.setLayout(new FlowLayout());
@@ -50,7 +50,7 @@ public class CheckUser extends JPanel implements ActionListener{
 		this.setLayout(new BorderLayout());
 		this.add(jp, BorderLayout.NORTH);
 
-		vector2.add("Student ID");
+		vector2.add("User ID");
 		vector2.add("Name");
 		vector2.add("Password");
 		vector2.add("College");
@@ -59,12 +59,12 @@ public class CheckUser extends JPanel implements ActionListener{
 		
 		//add ActionListener for button1
 		button1.addActionListener(this);
-		this.setSize(500,500);		
+		this.setSize(500, 500);		
 	}
 	
 	//add ActionEvent
 	public void actionPerformed(ActionEvent e){
-		String numorname,searchf,sql;
+		String numorname, searchf, sql;
 		numorname = checkcbo.getSelectedItem().toString();
 		searchf = checkfield.getText().trim();
 		{
@@ -105,18 +105,18 @@ public class CheckUser extends JPanel implements ActionListener{
 					
 					vector1.add(vector3);						
 				}
-				table = new JTable(vector1,vector2);
+				table = new JTable(vector1, vector2);
 				jspane = new JScrollPane(table);
-				this.add(jspane,BorderLayout.CENTER);
+				this.add(jspane, BorderLayout.CENTER);
 			}catch(IOException e){
-				System.out.println("Unable to Obtain Information.");					
+				System.out.println("Unable to Obtain Information");					
 				}
 			//close data stream and Socket object
 			output.close();
 			input.close();
 			socket.close();
 			}catch(EOFException eof){
-				System.out.println("Server Outages.");
+				System.out.println("Server Outages");
 				}catch(IOException e){
 					e.printStackTrace();
 					}

@@ -33,20 +33,20 @@ public class DeleteUsers extends JPanel{
 		button2 = new JButton("Delete");
 		
 		//set Controller's Bounds
-		jnumber.setBounds(30,20,60,26);
-		jname.setBounds(30,100,60,26);
-		jpassword.setBounds(30,130,60,26);
-		jcollege.setBounds(30,160,60,26);
-		jsubject.setBounds(30,190,60,26);
-		jgrade.setBounds(30,220,60,26);	
-		number.setBounds(110,20,120,26);
-		name.setBounds(110,100,120,26);
-		password.setBounds(110,130,120,26);
-		college.setBounds(110,160,120,26);
-		subject.setBounds(110,190,120,26);
-		grade.setBounds(110,220,120,26);		
-		button1.setBounds(60,60,60,30);
-		button2.setBounds(60,250,60,26);
+		jnumber.setBounds(30, 20, 60, 26);
+		jname.setBounds(30, 100, 60, 26);
+		jpassword.setBounds(30, 130, 60, 26);
+		jcollege.setBounds(30, 160, 60, 26);
+		jsubject.setBounds(30, 190, 60, 26);
+		jgrade.setBounds(30, 220, 60, 26);	
+		number.setBounds(110, 20, 120, 26);
+		name.setBounds(110, 100, 120, 26);
+		password.setBounds(110, 130, 120, 26);
+		college.setBounds(110, 160, 120, 26);
+		subject.setBounds(110, 190, 120, 26);
+		grade.setBounds(110, 220, 120, 26);		
+		button1.setBounds(60, 60, 60, 30);
+		button2.setBounds(60, 250, 60, 26);
 		
 		//set JTextField Not Editable
 		name.setEnabled(false);
@@ -144,13 +144,13 @@ public class DeleteUsers extends JPanel{
 						}
 				}
 		});
-		setSize(250,380);
+		setSize(250, 380);
 		this.setVisible(true);
 	}
 		
 	public static void main(String[] args){
 		
-		DeleteUsers app1=new DeleteUsers();
+		DeleteUsers app1 = new DeleteUsers();
 			
 	}	
 }

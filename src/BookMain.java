@@ -162,7 +162,7 @@ public class BookMain extends JFrame {
 		});
 		menuitem10.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				DelBook delbook1 = new DelBook();
+				DeleteBook delbook1 = new DeleteBook();
 				pan.add(delbook1,"Delete Book Information");
 				CardLayout c1 = (CardLayout)pan.getLayout();
 				c1.show(pan, "Delete Book Information");	

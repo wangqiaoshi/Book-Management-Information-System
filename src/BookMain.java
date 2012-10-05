@@ -105,7 +105,7 @@ public class BookMain extends JFrame {
 		});
 		menuitem3.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				DelUsers delusers1=new DelUsers();
+				DeleteUsers delusers1=new DeleteUsers();
 				pan.add(delusers1,"Delete User Information");
 				CardLayout c1=(CardLayout)pan.getLayout();
 				c1.show(pan, "Delete User Information");	

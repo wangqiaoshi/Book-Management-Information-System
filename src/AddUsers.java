@@ -84,7 +84,7 @@ public class AddUsers extends JPanel {
 					int k = -1;
 					k = conn.insert(sqlstr);
 					if (number.getText().toString().equals(""))
-						JOptionPane.showMessageDialog(null, "Number cannot be Empty!", "Add", JOptionPane.WARNING_MESSAGE);
+						JOptionPane.showMessageDialog(null, "Student ID cannot be Empty!", "Add", JOptionPane.WARNING_MESSAGE);
 					else if (name.getText().toString().equals(""))
 						JOptionPane.showMessageDialog(null, "Name cannot be Empty!", "Add", JOptionPane.WARNING_MESSAGE);
 					else if (password.getText().toString().equals(""))

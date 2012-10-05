@@ -78,7 +78,7 @@ import javax.swing.*;
 				{
 				try{
 					if(number.getText().toString().equals(""))
-						JOptionPane.showMessageDialog(null, "Number cannot be Empty!","Edit",JOptionPane.WARNING_MESSAGE);
+						JOptionPane.showMessageDialog(null, "Student ID cannot be Empty!","Edit",JOptionPane.WARNING_MESSAGE);
 					String sqlstr1;
 					JdbcFiles conn=new JdbcFiles();
 					sqlstr1="select number,name,password,college,subject,grade from users where convert(nvarchar(255),number)='"+number.getText()+"'";
@@ -123,7 +123,7 @@ import javax.swing.*;
 					JdbcFiles conn1=new JdbcFiles();
 					k=conn1.insert(sqlstr2);
 					if(number.getText().toString().equals(""))
-						JOptionPane.showMessageDialog(null, "Number cannot be Empty!","Edit",JOptionPane.WARNING_MESSAGE);	
+						JOptionPane.showMessageDialog(null, "Student ID cannot be Empty!","Edit",JOptionPane.WARNING_MESSAGE);	
 					else if(name.getText().toString().equals(""))
 						JOptionPane.showMessageDialog(null, "Name cannot be Empty!","Edit",JOptionPane.WARNING_MESSAGE);	
 					else if(password.getText().toString().equals(""))

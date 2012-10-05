@@ -114,8 +114,8 @@ public class BookMain extends JFrame {
 		});
 		menuitem4.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				SearchUser searchuser1=new SearchUser();
-				pan.add(searchuser1,"Check User Information");
+				CheckUser checkuser1=new CheckUser();
+				pan.add(checkuser1,"Check User Information");
 				CardLayout c1=(CardLayout)pan.getLayout();
 				c1.show(pan, "Check User Information");
 			}

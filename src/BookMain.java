@@ -90,89 +90,89 @@ public class BookMain extends JFrame {
 			public void actionPerformed(ActionEvent e){
 				AddUsers addusers1 = new AddUsers();
 				pan.add(addusers1,"Add User Information");
-				CardLayout c1=(CardLayout)pan.getLayout();
+				CardLayout c1 = (CardLayout)pan.getLayout();
 				c1.show(pan, "Add User Information");	
 			}
 		});
 		menuitem2.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				UpdateUsers updateusers1=new UpdateUsers();
+				UpdateUsers updateusers1 = new UpdateUsers();
 				pan.add(updateusers1,"Edit User Information");				 
-				CardLayout c1=(CardLayout)pan.getLayout();
+				CardLayout c1 = (CardLayout)pan.getLayout();
 				c1.show(pan, "Edit User Information");	
 				
 			}
 		});
 		menuitem3.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				DeleteUsers delusers1=new DeleteUsers();
+				DeleteUsers delusers1 = new DeleteUsers();
 				pan.add(delusers1,"Delete User Information");
-				CardLayout c1=(CardLayout)pan.getLayout();
+				CardLayout c1 = (CardLayout)pan.getLayout();
 				c1.show(pan, "Delete User Information");	
 				
 			}
 		});
 		menuitem4.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				CheckUser checkuser1=new CheckUser();
+				CheckUser checkuser1 = new CheckUser();
 				pan.add(checkuser1,"Check User Information");
-				CardLayout c1=(CardLayout)pan.getLayout();
+				CardLayout c1 = (CardLayout)pan.getLayout();
 				c1.show(pan, "Check User Information");
 			}
 		});
 		menuitem5.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				LendBook lendbook1=new LendBook();
+				LendBook lendbook1 = new LendBook();
 				pan.add(lendbook1,"Borrowed Book Information");
-				CardLayout c1=(CardLayout)pan.getLayout();
+				CardLayout c1 = (CardLayout)pan.getLayout();
 				c1.show(pan, "Borrowed Book Information");	
 			}
 		});
 		menuitem6.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				ReturnBook returnbook1=new ReturnBook();
+				ReturnBook returnbook1 = new ReturnBook();
 				pan.add(returnbook1,"Returned Book Information");
-				CardLayout c1=(CardLayout)pan.getLayout();
+				CardLayout c1 = (CardLayout)pan.getLayout();
 				c1.show(pan, "Returned Book Information");	
 			}
 		});
 		menuitem7.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				SearchLend searchlend1=new SearchLend();
-				pan.add(searchlend1,"Search Borrowed Information");
-				CardLayout c1=(CardLayout)pan.getLayout();
-				c1.show(pan, "Search Borrowed Information");	
+				CheckLend checklend1 = new CheckLend();
+				pan.add(checklend1,"Search Borrowed Information");
+				CardLayout c1 = (CardLayout)pan.getLayout();
+				c1.show(pan, "Check Borrowed Information");	
 			}
 		});
 		menuitem8.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				AddBook addbook1=new AddBook();
+				AddBook addbook1 = new AddBook();
 				pan.add(addbook1,"Add Book Information");
-				CardLayout c1=(CardLayout)pan.getLayout();
+				CardLayout c1 = (CardLayout)pan.getLayout();
 				c1.show(pan, "Add Book Information");	
 			}
 		});
 		menuitem9.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				UpdateBook updatebook1=new UpdateBook();
+				UpdateBook updatebook1 = new UpdateBook();
 				pan.add(updatebook1,"Edit Book Information");
-				CardLayout c1=(CardLayout)pan.getLayout();
+				CardLayout c1 = (CardLayout)pan.getLayout();
 				c1.show(pan, "Edit Book Information");	
 			}
 		});
 		menuitem10.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				DelBook delbook1=new DelBook();
+				DelBook delbook1 = new DelBook();
 				pan.add(delbook1,"Delete Book Information");
-				CardLayout c1=(CardLayout)pan.getLayout();
+				CardLayout c1 = (CardLayout)pan.getLayout();
 				c1.show(pan, "Delete Book Information");	
 			}
 		});
 		menuitem11.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				SearchBook searchbook1=new SearchBook();
+				SearchBook searchbook1 = new SearchBook();
 				pan.add(searchbook1,"Search Book Information");
-				CardLayout c1=(CardLayout)pan.getLayout();
+				CardLayout c1 = (CardLayout)pan.getLayout();
 				c1.show(pan, "Search Book Information");	
 			}
 		});

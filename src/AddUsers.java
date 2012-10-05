@@ -12,7 +12,7 @@ public class AddUsers extends JPanel {
 	
 	public AddUsers(){
 		this.setLayout(null);
-		jnumber = new JLabel("Student ID");
+		jnumber = new JLabel("User ID");
 		number = new JTextField();
 		jname = new JLabel("Name");
 		name = new JTextField();
@@ -83,7 +83,7 @@ public class AddUsers extends JPanel {
 					int k = -1;
 					k = conn.insert(sqlstr);
 					if (number.getText().toString().equals(""))
-						JOptionPane.showMessageDialog(null, "Student ID cannot be Empty!", "Add", JOptionPane.WARNING_MESSAGE);
+						JOptionPane.showMessageDialog(null, "User ID cannot be Empty!", "Add", JOptionPane.WARNING_MESSAGE);
 					else if (name.getText().toString().equals(""))
 						JOptionPane.showMessageDialog(null, "Name cannot be Empty!", "Add", JOptionPane.WARNING_MESSAGE);
 					else if (password.getText().toString().equals(""))

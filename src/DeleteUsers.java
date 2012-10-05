@@ -79,8 +79,8 @@ public class DeleteUsers extends JPanel{
 					if(number.getText().toString().equals(""))
 						JOptionPane.showMessageDialog(null, "Student ID cannot be Empty!", "Delete", JOptionPane.WARNING_MESSAGE);
 					String sqlstr1;
-					JdbcFiles conn=new JdbcFiles();
-					sqlstr1="select number,name,password,college,subject,grade from users where convert(nvarchar(255),number)='"+number.getText()+"'";
+					JdbcFiles conn = new JdbcFiles();
+					sqlstr1 = "select number,name,password,college,subject,grade from users where convert(nvarchar(255),number)='"+number.getText()+"'";
 					ResultSet result=conn.executeQuery(sqlstr1);							
 					   if(result.next()){
 						   {
@@ -89,23 +89,15 @@ public class DeleteUsers extends JPanel{
 							   college.setText(result.getString("college"));
 							   subject.setText(result.getString("subject"));
 							   grade.setText(result.getString("grade"));
-							 /*  name.setEnabled(true);
-							   password.setEnabled(true);
-							   college.setEnabled(true);
-							   subject.setEnabled(true);
-							   grade.setEnabled(true);*/
 						   }
-					}
-					   else
-						   JOptionPane.showMessageDialog(null, "Student Information Not Found.", "Delete",JOptionPane.WARNING_MESSAGE);
-				}catch (ClassNotFoundException ce) {
-					System.out.println("SQLException:" + ce.getMessage());
-
-				} catch (SQLException ex) {
-					System.out.println(ex);
-
-				} catch (Exception s) {
-					s.printStackTrace();
+					}else
+						JOptionPane.showMessageDialog(null, "Student Information Not Found.", "Delete",JOptionPane.WARNING_MESSAGE);
+					   }catch (ClassNotFoundException ce) {
+						   System.out.println("SQLException:" + ce.getMessage());
+						   }catch (SQLException ex) {
+							   System.out.println(ex);
+							   } catch (Exception s) {
+								   s.printStackTrace();
 				}
 
 				}
@@ -148,8 +140,8 @@ public class DeleteUsers extends JPanel{
 						System.out.println(ex);
 						
 					}catch(Exception s){
-						s.printStackTrace();				
-					}
+						s.printStackTrace();
+						}
 				}
 		});
 		setSize(250,380);

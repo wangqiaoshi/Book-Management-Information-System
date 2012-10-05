@@ -123,9 +123,9 @@ public class BookMain extends JFrame {
 		menuitem5.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
 				LendBook lendbook1 = new LendBook();
-				pan.add(lendbook1,"Borrowed Book Information");
+				pan.add(lendbook1,"Lent Book Information");
 				CardLayout c1 = (CardLayout)pan.getLayout();
-				c1.show(pan, "Borrowed Book Information");	
+				c1.show(pan, "Lent Book Information");	
 			}
 		});
 		menuitem6.addActionListener(new ActionListener(){
@@ -139,9 +139,9 @@ public class BookMain extends JFrame {
 		menuitem7.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
 				CheckLend checklend1 = new CheckLend();
-				pan.add(checklend1,"Check Borrowed Information");
+				pan.add(checklend1,"Check Lent Information");
 				CardLayout c1 = (CardLayout)pan.getLayout();
-				c1.show(pan, "Check Borrowed Information");	
+				c1.show(pan, "Check Lent Information");	
 			}
 		});
 		menuitem8.addActionListener(new ActionListener(){

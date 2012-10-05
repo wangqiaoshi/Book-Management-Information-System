@@ -28,20 +28,20 @@ public class AddBook extends JPanel{
         button1 = new JButton("Add");
         button2 = new JButton("Cancel");
 
-        jnumber.setBounds(30,20,60,30);
-        jbookname.setBounds(30,70,60,26);
-        jpublish.setBounds(30,120,60,26);
-        jauthor.setBounds(30,170,60,26);
-        jisbn.setBounds(30,220,60,26);
-        jprice.setBounds(30,270,60,26);
-        number.setBounds(110,20,120,26);
-        bookname.setBounds(110,70,120,26);
-        publish.setBounds(110,120,120,26);
-        author.setBounds(110,170,120,26);
-        isbn.setBounds(110,220,120,26);
-        price.setBounds(110,270,120,26);
-        button1.setBounds(30,320,60,26);
-        button2.setBounds(110,320,60,26);
+        jnumber.setBounds(30, 20, 60, 30);
+        jbookname.setBounds(30, 70, 60, 26);
+        jpublish.setBounds(30, 120, 60, 26);
+        jauthor.setBounds(30, 170, 60, 26);
+        jisbn.setBounds(30, 220, 60, 26);
+        jprice.setBounds(30, 270, 60, 26);
+        number.setBounds(110, 20, 120, 26);
+        bookname.setBounds(110, 70, 120, 26);
+        publish.setBounds(110, 120, 120, 26);
+        author.setBounds(110, 170, 120, 26);
+        isbn.setBounds(110, 220, 120, 26);
+        price.setBounds(110, 270, 120, 26);
+        button1.setBounds(30, 320, 60, 26);
+        button2.setBounds(110, 320, 60, 26);
 
         this.add(jnumber);
         this.add(number);
@@ -80,8 +80,7 @@ public class AddBook extends JPanel{
         
 		//add ActionListener for button12
 		button2.addActionListener(new ActionListener(){
-			public void actionPerformed(ActionEvent e)
-			{
+			public void actionPerformed(ActionEvent e){
 				number.setText("");
 				bookname.setText("");
 				publish.setText("");

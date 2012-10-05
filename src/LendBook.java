@@ -13,12 +13,12 @@ public class LendBook extends JPanel{
 	
 	public LendBook(){
 		this.setLayout(null);
-		jbnumber=new JLabel("Book ID");
-		bnumber=new JTextField();
-		junumber=new JLabel("User ID");
-		unumber=new JTextField();
-		button1=new JButton("Lend");
-		button2=new JButton("Cancel");
+		jbnumber = new JLabel("Book ID");
+		bnumber = new JTextField();
+		junumber = new JLabel("User ID");
+		unumber = new JTextField();
+		button1 = new JButton("Lend");
+		button2 = new JButton("Cancel");
 		jbnumber.setBounds(30,20,60,30);
 		junumber.setBounds(30,70,60,26);
 		bnumber.setBounds(110,20,120,26);

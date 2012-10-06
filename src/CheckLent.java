@@ -27,18 +27,27 @@ public class CheckLent extends JPanel implements ActionListener{
 	String message = "";
 	
 	public CheckLent(){
-		searchlabel = new JLabel("Check Lent Book");
+		searchlabel = new JLabel("Check Lent Book:");
 		searchfield = new JTextField("Please Input Check Query");
 		searchcbo = new JComboBox();
 		button1 = new JButton("Check");
 		searchcbo.addItem("Check with Book ID");
 		searchcbo.addItem("Check with User ID");
-		jp.setLayout(new FlowLayout());
-		jp.add(searchlabel);
-		jp.add(searchfield);
-		jp.add(button1);
-		jp.add(searchcbo);
-		jp.add(button1);
+		//jp.setLayout(new FlowLayout());
+		//jp.add(searchlabel);
+		//jp.add(searchfield);
+		//jp.add(button1);
+		//jp.add(searchcbo);
+		//jp.add(button1);
+		searchlabel.setBounds(100, 50, 200, 26);
+		searchfield.setBounds(100, 90, 200, 26);
+		searchcbo.setBounds(100, 130, 200, 26);
+		button1.setBounds(200, 170, 100, 26);
+		this.add(searchlabel);
+		this.add(searchfield);
+		this.add(searchcbo);
+		this.add(button1);
+		
 		this.setLayout(new BorderLayout());
 		this.add(jp,BorderLayout.NORTH);
 		vector2.add("Book");

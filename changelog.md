@@ -10,3 +10,6 @@
 - **0.2.1 : 2012.10.06**
 	- **Features**
 	- Do some chenges in User Management menu, eliminate the use of FlowLayout in CheckUser module, cuz I don’t think it’s beautiful to put the methods in a line.
+- **0.2.2 : 2012.10.06**
+	- **Features**
+	- redesign all of the Layouts.

@@ -41,6 +41,7 @@ public class BookMain extends JFrame {
 		pan.add(lbl, "Book Management Information System");
 		this.add(pan, BorderLayout.CENTER);
 		this.setSize(540, 340);
+		//this.setResizable(false);
 		
 		//set Layout location in the center of the screen
 		Toolkit kit = Toolkit.getDefaultToolkit();

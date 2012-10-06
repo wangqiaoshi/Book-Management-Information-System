@@ -12,14 +12,14 @@ public class ReturnBook extends JPanel{
 	String message = "";
 	public ReturnBook(){
 		this.setLayout(null);
-		jbnumber = new JLabel("Book ID");
+		jbnumber = new JLabel("Book ID:", SwingConstants.RIGHT);
 		bnumber = new JTextField();
 		button1 = new JButton("Return");
 		button2 = new JButton("Cancel");
-		jbnumber.setBounds(30, 20, 60, 30);
-		bnumber.setBounds(110, 20, 120, 26);
-		button1.setBounds(30, 80, 60, 26);
-		button2.setBounds(110, 80, 60, 26);
+		jbnumber.setBounds(55, 100, 90, 26);
+		bnumber.setBounds(160, 100, 160, 26);
+		button1.setBounds(115, 145, 80, 26);
+		button2.setBounds(210, 145, 80, 26);
 		this.add(jbnumber);
 		this.add(bnumber);
 		this.add(button1);

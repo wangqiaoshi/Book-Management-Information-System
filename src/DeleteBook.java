@@ -15,35 +15,35 @@ public class DeleteBook extends JPanel{
 
 	public DeleteBook(){
 		this.setLayout(null);
-		jnumber = new JLabel("Seial Number");
+		jnumber = new JLabel("Seial Number:", SwingConstants.RIGHT);
         number = new JTextField();
-        jbookname = new JLabel("Book Name");
+        jbookname = new JLabel("Book Name:", SwingConstants.RIGHT);
         bookname = new JTextField();
-        jpublish = new JLabel("Publishing House");
+        jpublish = new JLabel("Publishing House:", SwingConstants.RIGHT);
         publish = new JTextField();
-        jauthor = new JLabel("Author");
+        jauthor = new JLabel("Author:", SwingConstants.RIGHT);
         author = new JTextField();
-        jisbn = new JLabel("ISBN");
+        jisbn = new JLabel("ISBN:", SwingConstants.RIGHT);
         isbn = new JTextField();
-        jprice = new JLabel("Price");
+        jprice = new JLabel("Price:", SwingConstants.RIGHT);
         price = new JTextField();
         button1 = new JButton("Check");
-        button2 = new JButton("Cancel");
+        button2 = new JButton("Delete");
 
-        jnumber.setBounds(30, 20, 60, 26);
-        jbookname.setBounds(30, 100, 60, 26);
-        jpublish.setBounds(30, 130, 60, 26);
-        jauthor.setBounds(30, 160, 60, 26);
-        jisbn.setBounds(30, 190, 60, 26);
-        jprice.setBounds(30, 220, 60, 26);
-        number.setBounds(110, 20, 120, 26);
-        bookname.setBounds(110, 100, 120, 26);
-        publish.setBounds(110, 130, 120, 26);
-        author.setBounds(110, 170, 120, 26);
-        isbn.setBounds(110, 190, 120, 26);
-        price.setBounds(110, 220, 120, 26);
-        button1.setBounds(60, 60, 60, 30);
-        button2.setBounds(60, 250, 60, 26);
+        jnumber.setBounds(55, 20, 90, 26);
+        jbookname.setBounds(55, 100, 90, 26);
+        jpublish.setBounds(30, 130, 115, 26);
+        jauthor.setBounds(55, 160, 90, 26);
+        jisbn.setBounds(55, 190, 90, 26);
+        jprice.setBounds(55, 220, 90, 26);
+        number.setBounds(160, 20, 160, 26);
+        bookname.setBounds(160, 100, 160, 26);
+        publish.setBounds(160, 130, 160, 26);
+        author.setBounds(160, 160, 160, 26);
+        isbn.setBounds(160, 190, 160, 26);
+        price.setBounds(160, 220, 160, 26);
+        button1.setBounds(150, 55, 100, 26);
+        button2.setBounds(150, 255, 100, 26);
 
         bookname.setEnabled(false);
         publish.setEnabled(false);

@@ -45,10 +45,10 @@ public class CheckUser extends JPanel implements ActionListener{
 		//jp.add(checkfield);
 		//jp.add(checkcbo);
 		//jp.add(button1);
-		checklabel.setBounds(100, 20, 200, 26);
-		checkfield.setBounds(100, 60, 200, 26);
-		checkcbo.setBounds(100, 100, 200, 26);
-		button1.setBounds(100, 140, 100, 26);
+		checklabel.setBounds(100, 50, 200, 26);
+		checkfield.setBounds(100, 90, 200, 26);
+		checkcbo.setBounds(100, 130, 200, 26);
+		button1.setBounds(200, 170, 100, 26);
 		
 		this.add(checklabel);
 		this.add(checkfield);

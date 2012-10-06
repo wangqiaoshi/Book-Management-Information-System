@@ -35,7 +35,7 @@ public class BookMain extends JFrame {
 	public void go(){
 		this.getContentPane().setLayout(border);
 		this.setTitle("Library Loan System");
-		lbl = new JLabel("Book Management Information System of City Institue, DLUT");
+		lbl = new JLabel("Book Management Information System of City Institue, DLUT", SwingConstants.CENTER);
 		CardLayout cardlayout = new CardLayout();
 		pan.setLayout(cardlayout);
 		pan.add(lbl, "Book Management Information System");

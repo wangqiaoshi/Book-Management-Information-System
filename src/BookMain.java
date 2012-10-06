@@ -39,8 +39,18 @@ public class BookMain extends JFrame {
 		CardLayout cardlayout = new CardLayout();
 		pan.setLayout(cardlayout);
 		pan.add(lbl, "Book Management Information System");
-		this.add(pan, BorderLayout.CENTER);
+		this.add(pan);
 		this.setSize(500, 250);
+		
+		//set Layout location in the center of the screen
+		Toolkit kit = Toolkit.getDefaultToolkit();
+		Dimension screenSize = kit.getScreenSize();
+		int screenWidth = screenSize.width/2;
+		int screenHeight = screenSize.height/2;
+		int height = this.getHeight(); 
+		int width = this.getWidth(); 
+		setLocation(screenWidth-width/2, screenHeight-height/2);
+		
 		this.setVisible(true);
 		this.setJMenuBar(menubar);
 		

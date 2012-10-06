@@ -49,8 +49,8 @@ public class Login extends JFrame{
 			String str1,str2,sqlStr;
 			Object obj = e.getSource();
 			//Get Username & Password from *Field
-			str1=jtflduser.getText().trim();
-			str2=new String(jtpwdfld.getPassword()).trim();		
+			str1 = jtflduser.getText().trim();
+			str2 = new String(jtpwdfld.getPassword()).trim();		
 				if(obj.equals(Ok_btn)){
 					if(str1.equals("")){
 						JOptionPane.showMessageDialog(frame, "Username cannot be Empty!");

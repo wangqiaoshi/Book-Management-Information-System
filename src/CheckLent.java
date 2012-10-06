@@ -31,8 +31,8 @@ public class CheckLent extends JPanel implements ActionListener{
 		searchfield = new JTextField("Please Input Check Query");
 		searchcbo = new JComboBox();
 		button1 = new JButton("Check");
-		searchcbo.addItem("Check with Book");
-		searchcbo.addItem("Check with User");
+		searchcbo.addItem("Check with Book ID");
+		searchcbo.addItem("Check with User ID");
 		jp.setLayout(new FlowLayout());
 		jp.add(searchlabel);
 		jp.add(searchfield);

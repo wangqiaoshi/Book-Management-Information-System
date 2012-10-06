@@ -31,7 +31,7 @@ public class CheckUser extends JPanel implements ActionListener{
 	String message = "";
 
 	public CheckUser(){
-		checklabel = new JLabel("Check User Information");
+		checklabel = new JLabel("Check User Information:");
 		checkfield = new JTextField("Please Input the Query");
 		checkcbo = new JComboBox();
 		button1 = new JButton("Check");
@@ -39,13 +39,21 @@ public class CheckUser extends JPanel implements ActionListener{
 		checkcbo.addItem("Check with User Name");
 		
 		//set JPanel Layout
-		jp.setLayout(new FlowLayout());
+		//jp.setLayout(new FlowLayout());
 
-		jp.add(checklabel);
-		jp.add(checkfield);
-		jp.add(button1);
-		jp.add(checkcbo);
-		jp.add(button1);
+		//jp.add(checklabel);
+		//jp.add(checkfield);
+		//jp.add(checkcbo);
+		//jp.add(button1);
+		checklabel.setBounds(100, 20, 200, 26);
+		checkfield.setBounds(100, 60, 200, 26);
+		checkcbo.setBounds(100, 100, 200, 26);
+		button1.setBounds(100, 140, 100, 26);
+		
+		this.add(checklabel);
+		this.add(checkfield);
+		this.add(checkcbo);
+		this.add(button1);
 
 		this.setLayout(new BorderLayout());
 		this.add(jp, BorderLayout.NORTH);

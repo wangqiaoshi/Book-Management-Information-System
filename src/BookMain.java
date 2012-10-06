@@ -39,8 +39,8 @@ public class BookMain extends JFrame {
 		CardLayout cardlayout = new CardLayout();
 		pan.setLayout(cardlayout);
 		pan.add(lbl, "Book Management Information System");
-		this.add(pan);
-		this.setSize(500, 250);
+		this.add(pan, BorderLayout.CENTER);
+		this.setSize(540, 340);
 		
 		//set Layout location in the center of the screen
 		Toolkit kit = Toolkit.getDefaultToolkit();
@@ -64,9 +64,9 @@ public class BookMain extends JFrame {
 		menubar.add(menu3);
 		menubar.add(menu4);
 		
-		menuitem1.setText("Add User");
-		menuitem2.setText("Edit User");
-		menuitem3.setText("Delete User");
+		menuitem1.setText("Add a User");
+		menuitem2.setText("Edit a User");
+		menuitem3.setText("Delete a User");
 		menuitem4.setText("Check a User");
 		
 		menu1.add(menuitem1);
@@ -74,17 +74,17 @@ public class BookMain extends JFrame {
 		menu1.add(menuitem3);
 		menu1.add(menuitem4);
 		
-		menuitem5.setText("Borrow Books");
-		menuitem6.setText("Return Books");
+		menuitem5.setText("Lend a Book");
+		menuitem6.setText("Return a Book");
 		menuitem7.setText("Check a Book");
 		
 		menu2.add(menuitem5);
 		menu2.add(menuitem6);
 		menu2.add(menuitem7);
 		
-		menuitem8.setText("Add Books");
-		menuitem9.setText("Edit Books");
-		menuitem10.setText("Delete Books");
+		menuitem8.setText("Add a Book");
+		menuitem9.setText("Edit a Book");
+		menuitem10.setText("Delete a Book");
 		menuitem11.setText("Check a Book");
 		
 		menu3.add(menuitem8);
@@ -98,16 +98,16 @@ public class BookMain extends JFrame {
 		
 		menuitem1.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				AddUsers addusers1 = new AddUsers();
-				pan.add(addusers1,"Add User Information");
+				AddUser adduser1 = new AddUser();
+				pan.add(adduser1,"Add User Information");
 				CardLayout c1 = (CardLayout)pan.getLayout();
 				c1.show(pan, "Add User Information");	
 			}
 		});
 		menuitem2.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				UpdateUsers updateusers1 = new UpdateUsers();
-				pan.add(updateusers1,"Edit User Information");				 
+				UpdateUser updateuser1 = new UpdateUser();
+				pan.add(updateuser1,"Edit User Information");				 
 				CardLayout c1 = (CardLayout)pan.getLayout();
 				c1.show(pan, "Edit User Information");	
 				
@@ -115,8 +115,8 @@ public class BookMain extends JFrame {
 		});
 		menuitem3.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				DeleteUsers delusers1 = new DeleteUsers();
-				pan.add(delusers1,"Delete User Information");
+				DeleteUser deluser1 = new DeleteUser();
+				pan.add(deluser1,"Delete User Information");
 				CardLayout c1 = (CardLayout)pan.getLayout();
 				c1.show(pan, "Delete User Information");	
 				
@@ -133,17 +133,17 @@ public class BookMain extends JFrame {
 		menuitem5.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
 				LendBook lendbook1 = new LendBook();
-				pan.add(lendbook1,"Lent Book Information");
+				pan.add(lendbook1,"Lend Book Information");
 				CardLayout c1 = (CardLayout)pan.getLayout();
-				c1.show(pan, "Lent Book Information");	
+				c1.show(pan, "Lend Book Information");	
 			}
 		});
 		menuitem6.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
 				ReturnBook returnbook1 = new ReturnBook();
-				pan.add(returnbook1,"Returned Book Information");
+				pan.add(returnbook1,"Return Book Information");
 				CardLayout c1 = (CardLayout)pan.getLayout();
-				c1.show(pan, "Returned Book Information");	
+				c1.show(pan, "Return Book Information");	
 			}
 		});
 		menuitem7.addActionListener(new ActionListener(){

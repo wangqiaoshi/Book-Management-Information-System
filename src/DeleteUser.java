@@ -6,10 +6,10 @@ import java.sql.*;
 import javax.swing.*;
 
 public class DeleteUser extends JPanel{
-	private JLabel jnumber,jname,jpassword,jcollege,jsubject,jgrade;
-	private JTextField number,name,college,subject,grade;
+	private JLabel jnumber, jname, jpassword, jcollege, jsubject, jgrade;
+	private JTextField number, name, college, subject, grade;
 	private JPasswordField password;
-	private JButton button1,button2;
+	private JButton button1, button2;
 	PrintStream output;
 	DataInputStream input;
 	String message = "";
@@ -80,8 +80,8 @@ public class DeleteUser extends JPanel{
 						JOptionPane.showMessageDialog(null, "Student ID cannot be Empty!", "Delete", JOptionPane.WARNING_MESSAGE);
 					String sqlstr1;
 					JdbcFiles conn = new JdbcFiles();
-					sqlstr1 = "select number,name,password,college,subject,grade from users where convert(nvarchar(255),number)='"+number.getText()+"'";
-					ResultSet result=conn.executeQuery(sqlstr1);							
+					sqlstr1 = "select number,name,password,college,subject,grade from users where number='"+number.getText()+"'";
+					ResultSet result = conn.executeQuery(sqlstr1);							
 					   if(result.next()){
 						   {
 							   name.setText(result.getString("name"));
@@ -111,8 +111,8 @@ public class DeleteUser extends JPanel{
 			{
 	try{
 					
-					String sqlstr2="delete from users where convert(nvarchar(255),number)='"+number.getText()+"'";
-					int k=-1;
+					String sqlstr2 = "delete from users where number='"+number.getText()+"'";
+					int k = -1;
 					JdbcFiles conn1=new JdbcFiles();
 					k=conn1.insert(sqlstr2);
 					

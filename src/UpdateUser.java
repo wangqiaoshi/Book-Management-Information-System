@@ -80,7 +80,7 @@ import javax.swing.*;
 							JOptionPane.showMessageDialog(null, "Student ID cannot be Empty!","Edit",JOptionPane.WARNING_MESSAGE);
 						String sqlstr1;
 						JdbcFiles conn=new JdbcFiles();
-						sqlstr1="select number,name,password,college,subject,grade from users where convert(nvarchar(255),number)='"+number.getText()+"'";
+						sqlstr1="select number,name,password,college,subject,grade from users where number='"+number.getText()+"'";
 						ResultSet result=conn.executeQuery(sqlstr1);							
 						if(result.next()){
 							{
@@ -111,7 +111,7 @@ import javax.swing.*;
 			button2.addActionListener(new ActionListener(){
 				public void actionPerformed(ActionEvent e){
 					try{
-						String sqlstr2 = "update users set name='"+name.getText()+"',password='"+password.getText()+"',college='"+college.getText()+"',subject='"+subject.getText()+"',grade='"+grade.getText()+"' where convert(nvarchar(255),number)='"+number.getText()+"'";
+						String sqlstr2 = "update users set name='"+name.getText()+"',password='"+password.getText()+"',college='"+college.getText()+"',subject='"+subject.getText()+"',grade='"+grade.getText()+"' where number='"+number.getText()+"'";
 						int k = -1;
 						JdbcFiles conn1=new JdbcFiles();
 						k = conn1.insert(sqlstr2);

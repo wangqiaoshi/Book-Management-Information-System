@@ -89,8 +89,8 @@ public class CheckUser extends JPanel implements ActionListener{
 	public void connect(String s){
 		Socket socket;
 		try{
-			//create a Socket class object, specify the port number 4321
-			socket = new Socket(InetAddress.getByName(""), 4321);
+			//create a Socket class object, specify the port number 3306
+			socket = new Socket(InetAddress.getByName(""), 3306);
 			//create data input and output streams object
 			output = new PrintWriter(new BufferedOutputStream(socket.getOutputStream()));
 			input = new BufferedReader(new InputStreamReader(socket.getInputStream()));

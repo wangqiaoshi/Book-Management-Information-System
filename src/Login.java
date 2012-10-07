@@ -53,29 +53,15 @@ public class Login extends JFrame{
 			//Get Username & Password from *Field
 			str1 = jtflduser.getText().trim();
 			str2 = new String(jtpwdfld.getPassword()).trim();
-			
-			java.sql.Connection conn = null;
-			
 			try{
-				Class.forName("com.mysql.jdbc.Driver");
-				String url = "jdbc:mysql://210.30.108.66:3306/booksystem";
-				
-				//get a connection to the database for a user named booksystem
-				conn = DriverManager.getConnection(url, "booksystem", "booksystem");
-					
 				if(obj.equals(Ok_btn)){
 					if(str1.equals("")){
 						JOptionPane.showMessageDialog(frame, "Username cannot be Empty!");
 					}
-
 					//create database connection
-					//JdbcFiles conn = new JdbcFiles();
-					//sqlStr="select * from admin where num='"+str1+"'and password='"+str2+"'";
-					//ResultSet result = conn.executeQuery(sqlStr);
-					
-					Statement stmt = conn.createStatement();
-					ResultSet result = stmt.executeQuery("select * from admin where name='"+str1+"'and password='"+str2+"'");
-					
+					JdbcFiles conn = new JdbcFiles();
+					sqlStr="select * from admin where name='"+str1+"'and password='"+str2+"'";
+					ResultSet result = conn.executeQuery(sqlStr);
 					if(result.next()){
 					//if(str1.equals("elilien")&&str2.equals("test")){
 						JOptionPane.showMessageDialog(frame,"Login Successful!");

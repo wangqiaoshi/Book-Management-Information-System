@@ -1,17 +1,24 @@
 import java.sql.*;
 
 public class JdbcFiles {
-	Connection conn;
+	java.sql.Connection conn = null;
+	//Connection conn;
 	Statement stmt;
 	int inorupdatevalue = -1;
 	
 	public JdbcFiles()  throws Exception{
 
 		   try{
-			   String drivername = "sun.jdbc.odbc.JdbcOdbcDriver";
-		       String dbURL = "jdbc:odbc:MyBookDB";
-		       Class.forName(drivername);
-		       conn=DriverManager.getConnection(dbURL, "sa", "sa");
+			   Class.forName("com.mysql.jdbc.Driver");
+			   String url = "jdbc:mysql://210.30.108.66:3306/booksystem";
+			   
+			   //get a connection to the database for a user named booksystem
+			   conn = DriverManager.getConnection(url, "booksystem", "booksystem");
+			   
+			   //String drivername = "sun.jdbc.odbc.JdbcOdbcDriver";
+		       //String dbURL = "jdbc:odbc:MyBookDB";
+		       //Class.forName(drivername);
+		       //conn=DriverManager.getConnection(dbURL, "sa", "sa");
 		       stmt=conn.createStatement();
 		}catch(ClassNotFoundException e){
 		       throw new Exception("Database Driver Not Found" + e.getMessage());

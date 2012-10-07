@@ -13,3 +13,6 @@
 - **0.2.2 : 2012.10.06**
 	- **Features**
 	- redesign all of the Layouts.
+- **0.3.0 : 2012.10.07**
+	- **Features**
+	- Use MySQL database, successfully login, bugs when Add, Check & Delete sth. ;-)

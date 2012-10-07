@@ -1,6 +1,8 @@
 import java.awt.*;
 import java.awt.event.*;
+import java.sql.*;
 import javax.swing.*;
+
 public class Login extends JFrame{
 	private JLabel JLb1;
 	private JLabel JLb2;
@@ -50,12 +52,32 @@ public class Login extends JFrame{
 			Object obj = e.getSource();
 			//Get Username & Password from *Field
 			str1 = jtflduser.getText().trim();
-			str2 = new String(jtpwdfld.getPassword()).trim();		
+			str2 = new String(jtpwdfld.getPassword()).trim();
+			
+			java.sql.Connection conn = null;
+			
+			try{
+				Class.forName("com.mysql.jdbc.Driver");
+				String url = "jdbc:mysql://210.30.108.66:3306/booksystem";
+				
+				//get a connection to the database for a user named booksystem
+				conn = DriverManager.getConnection(url, "booksystem", "booksystem");
+					
 				if(obj.equals(Ok_btn)){
 					if(str1.equals("")){
 						JOptionPane.showMessageDialog(frame, "Username cannot be Empty!");
 					}
-					if(str1.equals("elilien")&&str2.equals("test")){
+
+					//create database connection
+					//JdbcFiles conn = new JdbcFiles();
+					//sqlStr="select * from admin where num='"+str1+"'and password='"+str2+"'";
+					//ResultSet result = conn.executeQuery(sqlStr);
+					
+					Statement stmt = conn.createStatement();
+					ResultSet result = stmt.executeQuery("select * from admin where name='"+str1+"'and password='"+str2+"'");
+					
+					if(result.next()){
+					//if(str1.equals("elilien")&&str2.equals("test")){
 						JOptionPane.showMessageDialog(frame,"Login Successful!");
 						//Open Book Management Information System Main Window
 						BookMain bk = new BookMain();
@@ -67,7 +89,16 @@ public class Login extends JFrame{
 					}					
 				}else if(obj.equals(Cancel_btn)){
 					System.exit(0);					
-				}			
+				}
+			}catch(ClassNotFoundException ce){
+				System.out.println("SQLException:" + ce.getMessage());
+				
+			}catch(SQLException ex){
+				System.out.println(ex);
+				
+			}catch(Exception s){
+				s.printStackTrace();				
+			}
 		}		
 	}
 	public static void main(String args[]){

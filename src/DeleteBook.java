@@ -1,5 +1,7 @@
 import java.io.*;
 import java.net.*;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -68,25 +70,66 @@ public class DeleteBook extends JPanel{
 
         button1.addActionListener(new ActionListener(){
         	public void actionPerformed(ActionEvent e){
-        		if(number.getText().toString().equals(""))
-        			JOptionPane.showMessageDialog(null, "Seial Number cannot be Empty!","Edit",JOptionPane.WARNING_MESSAGE);
+        		try{
+        			if(number.getText().toString().equals(""))
+        				JOptionPane.showMessageDialog(null, "Book ID cannot be Empty!","Edit",JOptionPane.WARNING_MESSAGE);
+        			String sqlstr1;
+					JdbcFiles conn = new JdbcFiles();
+					sqlstr1 = "select number,bookname,publish,author,isbn,price from books where number='"+number.getText()+"'";
+					ResultSet result = conn.executeQuery(sqlstr1);							
+					   if(result.next()){
+						   {
+							   bookname.setText(result.getString("bookname"));
+							   publish.setText(result.getString("publish"));
+							   author.setText(result.getString("author"));
+							   isbn.setText(result.getString("isbn"));
+							   price.setText(result.getString("price"));
+						   }
+					}else
+						JOptionPane.showMessageDialog(null, "Book Information Not Found.", "Delete",JOptionPane.WARNING_MESSAGE);
+					   }catch (ClassNotFoundException ce) {
+						   System.out.println("SQLException:" + ce.getMessage());
+						   }catch (SQLException ex) {
+							   System.out.println(ex);
+							   } catch (Exception s) {
+								   s.printStackTrace();
+							   }
         		}
         	});
 
 		button2.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				if(number.getText().toString().equals(""))
-        			JOptionPane.showMessageDialog(null, "Seial Number cannot be Empty!", "Edit", JOptionPane.WARNING_MESSAGE);
-        		else if(bookname.getText().toString().equals(""))
-            		JOptionPane.showMessageDialog(null, "Book Name cannot be Empty!", "Edit", JOptionPane.WARNING_MESSAGE);
-            	else if(publish.getText().toString().equals(""))
-                	JOptionPane.showMessageDialog(null, "Publishing House cannot be Empty!", "Edit", JOptionPane.WARNING_MESSAGE);
-                else if(author.getText().toString().equals(""))
-                    JOptionPane.showMessageDialog(null, "Author cannot be Empty!", "Edit", JOptionPane.WARNING_MESSAGE);
-                else if(isbn.getText().toString().equals(""))
-                    JOptionPane.showMessageDialog(null, "ISBN cannot be Empty!", "Edit", JOptionPane.WARNING_MESSAGE);
-                else if(price.getText().toString().equals(""))
-                    JOptionPane.showMessageDialog(null, "Price cannot be Empty!", "Edit", JOptionPane.WARNING_MESSAGE);
+				try{
+					String sqlstr2 = "delete from books where number='"+number.getText()+"'";
+					int k = -1;
+					JdbcFiles conn1 = new JdbcFiles();
+					k=conn1.insert(sqlstr2);
+					if(number.getText().toString().equals(""))
+						JOptionPane.showMessageDialog(null, "Book ID cannot be Empty!", "Edit", JOptionPane.WARNING_MESSAGE);
+					else if(bookname.getText().toString().equals(""))
+						JOptionPane.showMessageDialog(null, "Book Name cannot be Empty!", "Edit", JOptionPane.WARNING_MESSAGE);
+					else if(publish.getText().toString().equals(""))
+						JOptionPane.showMessageDialog(null, "Publishing House cannot be Empty!", "Edit", JOptionPane.WARNING_MESSAGE);
+					else if(author.getText().toString().equals(""))
+						JOptionPane.showMessageDialog(null, "Author cannot be Empty!", "Edit", JOptionPane.WARNING_MESSAGE);
+					else if(isbn.getText().toString().equals(""))
+						JOptionPane.showMessageDialog(null, "ISBN cannot be Empty!", "Edit", JOptionPane.WARNING_MESSAGE);
+					else if(price.getText().toString().equals(""))
+						JOptionPane.showMessageDialog(null, "Price cannot be Empty!", "Edit", JOptionPane.WARNING_MESSAGE);
+					else if (k > -1){
+						JOptionPane.showMessageDialog(null, "Delete Successful!", "Delete",JOptionPane.WARNING_MESSAGE);
+						conn1.close();
+						} else
+							JOptionPane.showMessageDialog(null, "Delete Failed!", "Delete",JOptionPane.WARNING_MESSAGE);									
+					}catch(ClassNotFoundException ce){
+						System.out.println("SQLException:"+ce.getMessage());
+						
+					}catch(SQLException ex){
+						System.out.println(ex);
+						
+					}catch(Exception s){
+						s.printStackTrace();
+						}
 				}
 			});
 		setSize(250, 380);

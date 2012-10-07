@@ -16,3 +16,6 @@
 - **0.3.0 : 2012.10.07**
 	- **Features**
 	- Use MySQL database, successfully login, bugs when Add, Check & Delete sth. ;-)
+- **0.3.1 : 2012.10.07**
+	- **Features**
+	- Add, Edit & Delete function in User & Book menu seems work fine.

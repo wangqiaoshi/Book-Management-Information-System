@@ -73,8 +73,7 @@ public class DeleteUser extends JPanel{
 		
 		//add ActionListener for button1
 		button1.addActionListener(new ActionListener(){
-			public void actionPerformed(ActionEvent e)
-			{
+			public void actionPerformed(ActionEvent e){
 				try{
 					if(number.getText().toString().equals(""))
 						JOptionPane.showMessageDialog(null, "Student ID cannot be Empty!", "Delete", JOptionPane.WARNING_MESSAGE);
@@ -98,7 +97,7 @@ public class DeleteUser extends JPanel{
 							   System.out.println(ex);
 							   } catch (Exception s) {
 								   s.printStackTrace();
-				}
+							   }
 
 				}
 			
@@ -107,13 +106,11 @@ public class DeleteUser extends JPanel{
 		
 		//add ActionListener for button2
 		button2.addActionListener(new ActionListener(){
-			public void actionPerformed(ActionEvent e)
-			{
-	try{
-					
+			public void actionPerformed(ActionEvent e){
+				try{					
 					String sqlstr2 = "delete from users where number='"+number.getText()+"'";
 					int k = -1;
-					JdbcFiles conn1=new JdbcFiles();
+					JdbcFiles conn1 = new JdbcFiles();
 					k=conn1.insert(sqlstr2);
 					
 					if(number.getText().toString().equals(""))

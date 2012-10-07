@@ -1,19 +1,20 @@
 import java.io.*;
 import java.net.*;
+import java.sql.SQLException;
 import java.awt.event.*;
 import javax.swing.*;
 
 public class AddBook extends JPanel{
 	private JTextField number, bookname, publish, author, isbn, price;
 	private JLabel jnumber, jbookname, jpublish, jauthor, jisbn, jprice;
-	private JButton button1,button2;
+	private JButton button1, button2;
 	PrintStream output;
 	DataInputStream input;
 	String message = "";
 
 	public AddBook(){
 		this.setLayout(null);
-        jnumber = new JLabel("Seial Number:", SwingConstants.RIGHT);
+        jnumber = new JLabel("Book ID:", SwingConstants.RIGHT);
         number = new JTextField();
         jbookname = new JLabel("Book Name:", SwingConstants.RIGHT);
         bookname = new JTextField();
@@ -61,22 +62,45 @@ public class AddBook extends JPanel{
         //add ActionListener for button1
         button1.addActionListener(new ActionListener(){
         	public void actionPerformed(ActionEvent e){
-        		if(number.getText().toString().equals(""))
-        			JOptionPane.showMessageDialog(null, "Seial Number cannot be Empty!", "Add", JOptionPane.WARNING_MESSAGE);
-        		else if(bookname.getText().toString().equals(""))
-            		JOptionPane.showMessageDialog(null, "Book Name cannot be Empty!", "Add", JOptionPane.WARNING_MESSAGE);
-            	else if(publish.getText().toString().equals(""))
-                	JOptionPane.showMessageDialog(null, "Publishing House cannot be Empty!", "Add", JOptionPane.WARNING_MESSAGE);
-                else if(author.getText().toString().equals(""))
-                    JOptionPane.showMessageDialog(null, "Author cannot be Empty!", "Add", JOptionPane.WARNING_MESSAGE);
-                else if(isbn.getText().toString().equals(""))
-                    JOptionPane.showMessageDialog(null, "ISBN cannot be Empty!", "Add", JOptionPane.WARNING_MESSAGE);
-                else if(price.getText().toString().equals(""))
-                    JOptionPane.showMessageDialog(null, "Price cannot be Empty!", "Add", JOptionPane.WARNING_MESSAGE);
-                else
-                	JOptionPane.showMessageDialog(null, "Add Successful!", "Add", JOptionPane.WARNING_MESSAGE);
-        		}
-        	});
+        		try {
+					JdbcFiles conn = new JdbcFiles();
+					String sqlstr = "insert into books(number,bookname,publish,author,isbn,price) values('"
+							+ number.getText()
+							+ "','"
+							+ bookname.getText()
+							+ "','"
+							+ publish.getText()
+							+ "','"
+							+ author.getText()
+							+"','"
+							+ isbn.getText()
+							+ "','"
+							+ price.getText() + "')";
+					int k = -1;
+					k = conn.insert(sqlstr);
+					if(number.getText().toString().equals(""))
+						JOptionPane.showMessageDialog(null, "Book ID cannot be Empty!", "Add", JOptionPane.WARNING_MESSAGE);
+					else if(bookname.getText().toString().equals(""))
+						JOptionPane.showMessageDialog(null, "Book Name cannot be Empty!", "Add", JOptionPane.WARNING_MESSAGE);
+					else if(publish.getText().toString().equals(""))
+						JOptionPane.showMessageDialog(null, "Publishing House cannot be Empty!", "Add", JOptionPane.WARNING_MESSAGE);
+					else if(author.getText().toString().equals(""))
+						JOptionPane.showMessageDialog(null, "Author cannot be Empty!", "Add", JOptionPane.WARNING_MESSAGE);
+					else if(isbn.getText().toString().equals(""))
+						JOptionPane.showMessageDialog(null, "ISBN cannot be Empty!", "Add", JOptionPane.WARNING_MESSAGE);
+					else if(price.getText().toString().equals(""))
+						JOptionPane.showMessageDialog(null, "Price cannot be Empty!", "Add", JOptionPane.WARNING_MESSAGE);
+					else
+						JOptionPane.showMessageDialog(null, "Add Successful!", "Add", JOptionPane.WARNING_MESSAGE);
+        		}catch (ClassNotFoundException ce){
+					System.out.println("SQLException:" + ce.getMessage());
+				}catch (SQLException ex){
+					System.out.println(ex);
+				}catch (Exception s){
+					s.printStackTrace();
+				}
+        	}
+        });
         
 		//add ActionListener for button12
 		button2.addActionListener(new ActionListener(){

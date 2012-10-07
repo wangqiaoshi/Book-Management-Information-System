@@ -77,7 +77,7 @@ public class BookMain extends JFrame {
 		
 		menuitem5.setText("Lend a Book");
 		menuitem6.setText("Return a Book");
-		menuitem7.setText("Check a Book");
+		menuitem7.setText("Check Lent Book");
 		
 		menu2.add(menuitem5);
 		menu2.add(menuitem6);

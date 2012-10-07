@@ -77,7 +77,7 @@ import javax.swing.*;
 				public void actionPerformed(ActionEvent e){
 					try{
 						if(number.getText().toString().equals(""))
-							JOptionPane.showMessageDialog(null, "Student ID cannot be Empty!","Edit",JOptionPane.WARNING_MESSAGE);
+							JOptionPane.showMessageDialog(null, "User ID cannot be Empty!","Edit",JOptionPane.WARNING_MESSAGE);
 						String sqlstr1;
 						JdbcFiles conn=new JdbcFiles();
 						sqlstr1="select number,name,password,college,subject,grade from users where number='"+number.getText()+"'";
@@ -96,7 +96,7 @@ import javax.swing.*;
 							    grade.setEnabled(true);
 							    }
 							}else
-								JOptionPane.showMessageDialog(null, "Student Information Not Found.","Edit",JOptionPane.WARNING_MESSAGE);
+								JOptionPane.showMessageDialog(null, "User Information Not Found.","Edit",JOptionPane.WARNING_MESSAGE);
 						}catch (ClassNotFoundException ce){
 							System.out.println("SQLException:" + ce.getMessage());
 							}catch (SQLException ex){
@@ -116,7 +116,7 @@ import javax.swing.*;
 						JdbcFiles conn1=new JdbcFiles();
 						k = conn1.insert(sqlstr2);
 						if(number.getText().toString().equals(""))
-							JOptionPane.showMessageDialog(null, "Student ID cannot be Empty!","Edit",JOptionPane.WARNING_MESSAGE);	
+							JOptionPane.showMessageDialog(null, "User ID cannot be Empty!","Edit",JOptionPane.WARNING_MESSAGE);	
 						else if(name.getText().toString().equals(""))
 							JOptionPane.showMessageDialog(null, "Name cannot be Empty!","Edit",JOptionPane.WARNING_MESSAGE);	
 						else if(password.getText().toString().equals(""))
